@@ -10491,8 +10491,9 @@ div#mCSB_1_container{
 
 
 .contact-style-two{
+  background-color: #a9a6a50f;
   position: relative;
-  padding: 120px 0px;
+  padding: 40px 0px;
 }
 
 .contact-style-two .sec-title{
@@ -10511,6 +10512,7 @@ div#mCSB_1_container{
 
 .contact-style-two .form-inner .form-group input[type='text'],
 .contact-style-two .form-inner .form-group input[type='email'],
+.contact-style-two .form-inner .form-group input[type='number'],
 .contact-style-two .form-inner .form-group textarea,
 .contact-style-two .form-inner .form-group .nice-select{
   position: relative;

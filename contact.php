@@ -10,7 +10,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 $captcha_response = $_POST['g-recaptcha-response'];
-$secret_key = "6LdFuAoqAAAAACnlJFjD-BLQwCJaRXMTuKKc71VuT"; // Replace with your secret key
+$secret_key = "6LdFuAoqAAAAACnlJFjD-BLQwCJaRXMTuKKc71Vu"; // Replace with your secret key
 $verify_url = "https://www.google.com/recaptcha/api/siteverify";
 $data = array(
     'secret' => $secret_key,
@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userEmail = $_POST['email_id'] ?? 'no-reply@example.com';
     $subject = $_POST['subject'] ?? 'N/A';
     $comments = $_POST['comments'] ?? 'N/A';
+    $phone = $_POST['phone'] ?? 'N/A';
 
     // Admin Email
     $adminEmail = 'parascolourchem@yahoo.co.in'; //megha
@@ -145,6 +146,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </tr>
                                      <tr>
                                         <td style="width: 460px">
+                                            <span style="font-size: 14px; font-weight: bold">Phone Number</span>
+                                        </td>
+                                        <td style="width: 90px">
+                                            <span style="font-size: 14px; font-weight: bold; margin-left: 10px;">:</span>
+                                        </td>
+                                        <td style="width: 3500px">
+                                            <label style="font-size: 14px;">'.$_POST['phone'].'</label>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 460px">
                                             <span style="font-size: 14px; font-weight: bold">Comments</span>
                                         </td>
                                         <td style="width: 90px">
@@ -153,6 +166,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <td style="width: 3500px">
                                             <label style="font-size: 14px;">'.$_POST['comments'].'</label>
                                         </td>
+                                        
                                     </tr>
         
                                     
